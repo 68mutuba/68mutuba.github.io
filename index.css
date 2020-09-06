@@ -2,6 +2,10 @@
   font-family: "Mamelon";
   src: url("./font/Mamelon.otf");
 }
+@font-face {
+  font-family: "AnzuMozi";
+  src: url("./font/AP.ttf");
+}
 body{
   background-image: url("./image/Background_Image.JPG");
   margin: 0;
@@ -11,6 +15,16 @@ body{
   background-color: #90B44B;
   position: fixed;
   top: 0;
+  text-align: center;
+  font-size: 15px;
+}
+nav ul li a {
+  padding: 18px;
+  text-transform:uppercase;
+  color: #ffffff;
+  font-size: 18px;
+  text-decoration: none;
+  display: block;
 }
 .set_center{
   width: 203px;
@@ -121,7 +135,71 @@ body{
 .specialthanks:link{
   color: #20B2AA;
 }
-a:link{
-  color: #20B2AA;
-  text-shadow: 2px 2px 3px #FFFFFF;
+.updatelog{
+  text-align: left;
+  margin-top: 180px;
+  margin-bottom: 100px;
+  width: 790px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.updatelog_title{
+  font-family: "Mamelon";
+}
+.updatelog_letter_title{
+  font-family: 'Mamelon';
+  font-size: 35px;
+  border-bottom: 1px solid #000000;
+  color: #000000;
+}
+.updatelog_letter_plus{
+  font-family: 'AnzuMozi';
+  font-size: 30px;
+  border-bottom: 1px solid #000000;
+  color: #BE0039;
+}
+.updatelog_letter_minus{
+  font-family: 'AnzuMozi';
+  font-size: 30px;
+  border-bottom: 1px solid #000000;
+  color: #333399;
+}
+.updatelog_letter_leaf{
+  font-family: 'AnzuMozi';
+  font-size: 30px;
+  border-bottom: 1px solid #000000;
+  color: #006F5F;
+}
+.updatelog_letter_title p{
+  margin: 0;
+  margin-top: 10px;
+}
+.updatelog_letter_plus p{
+  margin: 0;
+  margin-top: 10px;
+}
+.updatelog_letter_minus p{
+  margin: 0;
+  margin-top: 10px;
+}
+.updatelog_letter_leaf p{
+  margin: 0;
+  margin-top: 10px;
+}
+.updatelog_letter_leaf i{
+  font-size: 20px;
+}
+.update_note{
+  width: 800px;
+  padding:0 1em;
+  background: #fffbf2;
+  background-size: auto 2.5em;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  overflow: hidden;
+}
+li{
+  display: inline-block;
 }

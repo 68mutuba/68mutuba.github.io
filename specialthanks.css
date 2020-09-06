@@ -112,16 +112,25 @@ body{
   -webkit-transform: translateY(-50%) translateX(-50%);
   font-family: 'Mamelon';
 }
-.naz7z{
-
-}
-a:link{
+.naz7z a:link{
   color: #20B2AA;
   transition: 1.5s;
   text-shadow: 2px 2px 3px #FFFFFF;
   text-decoration: none;
 }
-a:hover{
+.naz7z a:hover{
+  color: #EDAE00;
+  border-left: solid 10px #EDAE00;
+  border-bottom: double 2px #EDAE00;
+  transition: 1.5s;
+}
+.Toto31010 a:link{
+  color: #20B2AA;
+  transition: 1.5s;
+  text-shadow: 2px 2px 3px #FFFFFF;
+  text-decoration: none;
+}
+.Toto31010 a:hover{
   color: #EDAE00;
   border-left: solid 10px #EDAE00;
   border-bottom: double 2px #EDAE00;
