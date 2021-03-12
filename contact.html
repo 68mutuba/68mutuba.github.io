@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <title>[Copylight]｜むつばのサイト</title>
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="./assets/css/normal/style.css?v=2">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="https://kit.fontawesome.com/e7b6124346.js" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/normal/slider.js" type="text/javascript"></script>
+    <script src="./assets/javascript/normal/autoScroll.js" type="text/javascript"></script>
+    <script src="./assets/javascript/normal/clearForm.js" type="text/javascript"></script>
+    <body id="contact">
+  </head>
+  <body>
+    <header>
+      <div class="parent_small">
+      <div class="setSlider">
+        <div class="slider">
+            <div class="image1"><img src="./assets/image/normal/image_1.png" alt="First images" width="30%" height="10%" style="display: block; margin-left: auto; margin-right: auto;"></div>
+            <div class="image2"><img src="./assets/image/normal/image_2.png" alt="Second images" width="30%" height="10%" style="display: block; margin-left: auto; margin-right: auto;"></div>
+        </div>
+      </div>
+      </div>
+      <div class="parent_small">
+        <div class="box_small home_small">
+          <span>
+            <a href="index.html">
+              <div class="icon_small">
+                <i class="fas fa-home"></i>
+              </div>
+              <h5>トップ</h5>
+            </a>
+          </span>
+        </div>
+        <div class="box_small profile_small">
+          <span>
+            <a href="profile.html">
+              <div class="icon_small">
+                <i class="fas fa-user-circle"></i>
+              </div>
+              <h5>自己紹介</h5>
+            </a>
+          </span>
+        </div>
+        <div class="box_small copyright_small">
+          <span>
+            <a href="copyright.html">
+              <div class="icon_small">
+                <i class="far fa-copyright"></i>
+              </div>
+              <h5>コピーライト</h5>
+            </a>
+          </span>
+        </div>
+        <div class="box_small keyboard_small">
+          <span>
+            <a href="distribution.html">
+              <div class="icon_small">
+                <i class="far fa-keyboard"></i>
+              </div>
+              <h5>配布物</h5>
+            </a>
+          </span>
+        </div>
+        <div class="box_small user_small">
+          <span>
+            <a href="specialthanks.html">
+              <div class="icon_small">
+                <i class="fas fa-user-tag"></i>
+              </div>
+              <h5>スペシャルサンクス</h5>
+            </a>
+          </span>
+        </div>
+      </div>
+    </header>
+    <div class="formcreate">
+      <form action="https://docs.google.com/forms/d/e/1FAIpQLSdoj_EnKwaf7Kp0iuS5Qp57TFNC3apTF6A3X4lv_gWkZB2Clg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true;">
+          <p>*必須</p>
+          <div class="writeformcontactType">
+            <label for="contactType"><p>お問い合わせカテゴリー</p></label>
+            <select name="entry.53222367" id="contactType">
+              <option data-value="報告" value="報告">報告</option>
+              <option data-value="機能追加" value="機能追加">機能追加</option>
+              <option data-value="その他" value="その他">その他</option>
+            </select>
+          </div>
+          <div class="writeformsubject">
+        	  <label for="form-subject"><p>・お問い合わせ要件*</p></label>
+            <p>端的に纏めた内容をお書きください。<p>
+          	<p><input id="form-subject" name="entry.2112011530" placeholder="短くまとめて書いてください。" required=""></p>
+          </div>
+          <div class="writeformmessage">
+            <label for="form-message"><p>・お問い合わせ詳細*</p></label>
+          	<p>最大1,000文字以内</p>
+          	<p><textarea id="form-message" name="entry.933834140" placeholder="ご自由にご記載下さい。" required=""></textarea></p>
+          </div>
+          <div class="writetwitterid">
+            <label for="sendTwitterID"><p>TwitterID</p></label>
+            <p>@の後</p>
+            <p><input id="sendTwitterID" name="entry.820220872" placeholder="@68mutuba_2" required=""></p>
+          </div>
+          <div class="writeform">
+        	<p><button type="submit" name="button" value="送信する" onclick="clearForm()">送信する</button></p>
+          </div>
+      </form>
+    </div>
+    <footer>
+
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,821 @@
+/*---------------------『全体』------------------------*/
+/* bodyの設定 */
+body{
+  background: linear-gradient(0deg, rgb(155, 207, 151), rgb(164, 202, 104));
+  background-attachment: fixed;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+/* bodyのスクロールバー削除 */
+body::-webkit-scrollbar{
+  display: none;
+}
+footer {
+  width: 100%;
+  background: white;
+}
+/*---------------------『全体』------------------------*/
+/*---------------------『index.html』------------------------*/
+/*「68むつば」と「68mutuba」を出すスライドショー*/
+.setSlider{
+  width: 40%;
+  margin: auto;
+}
+@media screen and (max-width:480px) {
+  .setSlider{
+    width: 80%;
+    margin: auto;
+  }
+}
+/*.descriptionと.introduction*/
+.top_spawn{
+  font-size: 20px;
+  font-weight: bold;
+  animation-name: fadein;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+@media screen and (max-width:480px) {
+  .top_spawn{
+    font-size: 10px;
+  }
+}
+/*じわーって出てくるために使うやつ*/
+@keyframes fadein {
+ from {
+    opacity: 0;
+    transform: translateY(20px);
+ }
+ to {
+    opacity: 1;
+    transform: translateY(0);
+ }
+}
+/*表題的な役割のメインタイトル*/
+.description{
+  color: #F0F0F0;
+  line-height: 200%;
+  vertical-align: middle;
+  text-align: center;
+  font-size: 50px;
+}
+@media screen and (max-width:480px) {
+  .description{
+    font-size: 33px;
+  }
+}
+/*サブ的な役割の説明のサブタイトル*/
+.introduction{
+  color: #F0F0F0;
+  line-height: 200%;
+  vertical-align: middle;
+  text-align: center;
+}
+/*▽の所の上の空間の設定*/
+.introduction a{
+  padding-top: 70px;
+}
+/*▽の所の設計*/
+.introduction a span{
+  position: absolute;
+  top: 550px;
+  left: 50%;
+  width: 24px;
+  height: 24px;
+  margin-left: -12px;
+  border-left: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  -webkit-animation: sdb 1.5s infinite;
+  animation: sdb 1.5s infinite;
+  box-sizing: border-box;
+}
+@-webkit-keyframes sdb {
+  0% {
+    -webkit-transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+@keyframes sdb {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
+  }
+}
+/*枠の作成*/
+.box{
+  position: relative;
+  width: 260px;
+  height: 260px;
+  background: #FFFFFA;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  border-radius: 40px;
+  text-align: center;
+}
+/*iconの大きさ*/
+.icon{
+  font-size: 100px;
+}
+/*親(1つのチーム)の作成*/
+.parent{
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width:480px) {
+  .parent{
+    display: block;
+  }
+}
+/*プロフィールの設定*/
+.profile{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .profile{
+   color: lightgreen;
+ }
+}
+/*プロフィールの所にカーソル合わした時の演出*/
+.profile:hover{
+  color: lightgreen;
+  transition: 1.5s;
+}
+/*プロフィールの所からカーソル離れた時の演出*/
+.profile a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*プロフィールのURLの所にカーソル合わした時の演出*/
+.profile a:hover{
+  text-decoration: underline;
+}
+/*プロフィールに1回訪れた時の演出*/
+.profile a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*著作権の設定*/
+.copyright{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .copyright{
+   color: lightpink
+ }
+}
+/*著作権の所にカーソル合わした時の演出*/
+.copyright:hover{
+  color: lightpink;
+  transition: 1.5s;
+}
+/*著作権の所からカーソル離れた時の演出*/
+.copyright a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*著作権に1回訪れた時の演出*/
+.copyright a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*著作権のURLの所にカーソル合わした時の演出*/
+.copyright a:hover{
+  text-decoration: underline;
+}
+/*配布物の設定*/
+.keyboard{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .keyboard{
+   color: lightskyblue
+ }
+}
+/*配布物の所にカーソル合わした時の演出*/
+.keyboard:hover{
+  color: lightskyblue;
+  transition: 1.5s;
+}
+/*配布物の所からカーソル離れた時の演出*/
+.keyboard a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*配布物に1回訪れた時の演出*/
+.keyboard a:hover{
+  text-decoration: underline;
+}
+/*配布物のURLの所にカーソル合わした時の演出*/
+.keyboard a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*スペシャルサンクスの設定*/
+.user{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .user{
+   color: khaki
+ }
+}
+/*スペシャルサンクスの所にカーソル合わした時の演出*/
+.user:hover{
+  color: khaki;
+  transition: 1.5s;
+}
+/*スペシャルサンクスの所からカーソル離れた時の演出*/
+.user a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*スペシャルサンクスのURLの所にカーソル合わした時の演出*/
+.user a:hover{
+  text-decoration: underline;
+}
+/*スペシャルサンクスに1回訪れた時の演出*/
+.user a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*Twitterの設定*/
+.twitter {
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .twitter{
+   color: #00acee
+ }
+}
+/*Twitterの所にカーソル合わした時の演出*/
+.twitter:hover{
+  color: #00acee;
+  transition: 1.5s;
+}
+/*Twitterの所からカーソル離れた時の演出*/
+.twitter a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*twitterのURLの所にカーソル合わした時の演出*/
+.twitter a:hover{
+  text-decoration: underline;
+}
+/*Twitterに1回訪れた時の演出*/
+.twitter a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*youtubeの設定*/
+.youtube {
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .youtube{
+   color: #ff0000;
+ }
+}
+/*youtubeの所にカーソル合わした時の演出*/
+.youtube:hover{
+  color: #ff0000;
+  transition: 1.5s;
+}
+/*youtubeの所からカーソル離れた時の演出*/
+.youtube a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*youtubeのURLの所にカーソル合わした時の演出*/
+.youtube a:hover{
+  text-decoration: underline;
+}
+/*youtubeに1回訪れた時の演出*/
+.youtube a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*githubの設定*/
+.github{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .github{
+   color: #171514;
+ }
+}
+/*githubの所にカーソル合わした時の演出*/
+.github:hover{
+  color: #171514;
+  transition: 1.5s;
+}
+/*githubの所からカーソル離れた時の演出*/
+.github a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*githubのURLの所にカーソル合わした時の演出*/
+.github a:hover{
+  text-decoration: underline;
+}
+/*githubに1回訪れた時の演出*/
+.github a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*discordの設定*/
+.discord{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .discord{
+   color: rgba(114,137,217);
+ }
+}
+/*discordの所にカーソル合わした時の演出*/
+.discord:hover{
+  color: rgba(114, 137, 217);
+  transition: 1.5s;
+}
+/*discordの所からカーソル離れた時の演出*/
+.discord a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*discordのURLの所にカーソル合わした時の演出*/
+.discord a:hover{
+  text-decoration: underline;
+}
+/*dicordに1回訪れた時の演出*/
+.discord a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*contactの設定*/
+.contact{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .contact{
+   color: #FF99CC;
+ }
+}
+/*contactの所にカーソル合わした時の演出*/
+.contact:hover{
+  color: #FF99CC;
+  transition: 1.5s;
+}
+/*contactの所からカーソル離れた時の演出*/
+.contact a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*contactのURLの所にカーソル合わした時の演出*/
+.contact a:hover{
+  text-decoration: underline;
+}
+/*contactに1回訪れた時の演出*/
+.contact a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*アコーディングバーの設定*/
+.acd-check{
+  display: none;
+}
+/*アコーディングバーの設定*/
+.acd-label{
+  background: #008E4A;
+  color: #fff;
+  display: block;
+  margin-bottom: 1px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+}
+/*アコーディングバーの設定*/
+.acd-content{
+  height: 0;
+  opacity: 0;
+  padding: 0 10px;
+  transition: .5s;
+  visibility: hidden;
+}
+/*アコーディングバーの設定*/
+.acd-check:checked + .acd-label + .acd-content{
+  height: 40px;
+  opacity: 1;
+  padding: 10px;
+  visibility: visible;
+}
+/*アップデートノートの作成(アコーディオンバーの中)*/
+.update_note{
+  width: 80%;
+  padding:0 1em;
+  background: #fffbf2;
+  background-size: auto 2.5em;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+/*今のバージョンの作成*/
+.now_version{
+  width: 80%;
+  padding:0 1em;
+  background: #fffbf2;
+  background-size: auto 2.5em;
+  border-bottom: 1px solid #000000;
+  border-left: 1px solid #000000;
+  border-right: 1px solid #000000;
+  border-top: 1px solid #000000;
+  overflow: hidden;
+  text-align: center;
+  margin: auto;
+}
+/*トップボタンの設定*/
+.topbutton{
+  bottom: 18px;
+  right: 18px;
+  width: 7em;
+  background-color: #2525aa;
+  opacity: 0.75;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 120%;
+  font-weight: bold;
+  padding: 10px;
+  margin: 0 0 0 auto;
+}
+/*トップボタンの設定*/
+.topbutton a{
+  color: white;
+  text-decoration: none;
+}
+/*トップボタンにカーソル合わした時の演出*/
+.topbutton a:hover{
+  color: yellow;
+  text-decoration: underline;
+}
+/*---------------------『index.html』------------------------*/
+/*『copyright.html / discribution.html / profile.html / specialthanks.html』共通*/
+.parent_small{
+  display: flex;
+  justify-content: center;
+}
+.box_small{
+  position: relative;
+  width: 100%;
+  height: 70px;
+  text-align: center;
+  background: #FFFFFA;
+}
+.box_small h5{
+  margin: auto;
+}
+.icon_small{
+  font-size: 30px;
+}
+.home_small a{
+  color: black;
+}
+.home_small a:hover{
+  color: green;
+}
+.profile_small a{
+  color: black;
+}
+.profile_small a:hover{
+  color: lightgreen;
+}
+.copyright_small a{
+  color: black;
+}
+.copyright_small a:hover{
+  color: lightpink;
+}
+.keyboard_small a{
+  color: black;
+}
+.keyboard_small a:hover{
+  color: lightskyblue
+}
+.user_small a{
+  color: black;
+}
+/*『copyright.html / distribution.html / profile.html / specialthanks.html』共通*/
+/*『profile.html』*/
+#profile{
+  background: lightgreen;
+}
+.profile_show a{
+  color: lightgreen;
+}
+.profile_icon img{
+  border-radius: 50%;
+  width: 212px;
+  height: 300px;
+}
+.set_introduction{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.set_icon{
+  width: 212px;
+  height: 300px;
+  border-radius: 50%;
+}
+.set_left{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+.set_left a{
+  color: black;
+}
+.set_left h1,h2{
+  border-bottom: solid 3px lightgreen;
+}
+.warm{
+  font-weight: bold;
+  color: #BE0032;
+  background-color: #FFFF00;
+}
+/*『profile.html』*/
+/*『copyright.html』*/
+#copyright{
+  background: lightpink;
+}
+.set_copyrighy_introduction{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+}
+.copyright_show a{
+  color: lightpink;
+}
+.copyright_introduction{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+}
+.copyright_introduction h1{
+  border-bottom: solid 3px lightpink;
+}
+.copyright_introduction h3{
+  padding: 10px;
+  line-height: 1.8;
+}
+/*『copyright.html』*/
+/*『distribution.html』*/
+#distribution{
+  background: lightskyblue;
+}
+.keyboard_show a{
+  color: lightskyblue;
+}
+.name h1{
+  color: white;
+  text-align: center;
+  margin: auto;
+  line-height: 2.5;
+}
+.title_space{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.0;
+}
+.title_space a{
+  color: black;
+}
+.title_space a:hover{
+  color: black;
+}
+.title_image{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.title_name{
+  font-size: 40px;
+}
+.title_date{
+  font-size: 30px;
+}
+.title_introduction{
+  font-size: 20px;
+}
+/*『distribution.html』*/
+/*『fireworks.html』*/
+.plugin_title_space{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.0;
+}
+.plugin_title_space a{
+  color: black;
+}
+.plugin_title_space a:hover{
+  color: black;
+}
+.plugin_introduction{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+}
+.plugin_introduction h1{
+  border-bottom: solid 3px lightskyblue;
+}
+.plugin_introduction h3{
+  padding: 10px;
+  line-height: 1.8;
+}
+.plugin_iflame{
+  width: 80%;
+}
+.plugin_console_false{
+  font-weight: bold;
+  color: red;
+  text-decoration: underline;
+}
+.plugin_console_true{
+  font-weight: bold;
+  color: green;
+  text-decoration: underline;
+}
+/*『fireworks.html』*/
+/*『specialthanks.html』*/
+#specialthanks{
+  background: khaki;
+}
+.user_show a{
+  color: khaki;
+}
+.specialthanks_title_space{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.0;
+}
+.specialthanks_title_space a{
+  color: black;
+}
+.specialthanks_title_space a:hover{
+  color: black;
+}
+.specialthanks_show a{
+  color: khaki;
+}
+.specialthanks_introduction{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+}
+.specialthanks_introduction h1{
+  border-bottom: solid 3px khaki;
+  padding-top: 2;
+}
+.specialthanks_introduction h3{
+  padding: 10px;
+  line-height: 1.8;
+}
+.shapecut{
+   border-radius: 50%;
+   float: left;
+   width: 10%;
+   height: 10%;
+   margin-top: 80px;
+}
+@media screen and (max-width: 480px) {
+  .shapecut{
+    border-radius: 50%;
+    float: left;
+    width: 30%;
+    height: 30%;
+    margin-top: 80px;
+  }
+}
+.specialthanks_twitter a{
+  color: #00acee;
+}
+.specialthanks_twitter a:hover{
+  color: #00acee;
+}
+.specialthanks_twitter a:visited{
+  color: #00acee;
+}
+.specialthanks_youtube a{
+  color: #ff0000;
+}
+.specialthanks_youtube a:hover{
+  color: #ff0000;
+}
+.specialthanks_youtube a:visited{
+  color: #ff0000;
+}
+/*『specialthanks.html』*/
+/*『contact.html』*/
+#contact{
+  background: #FF99CC;
+}
+.formcreate{
+  text-align: center;
+  margin: auto;
+}
+.writeformcontactType [type="text"]{
+  width: 80%;
+  height: 10px;
+}
+.writeformsubject [type="text"]{
+  width: 80%;
+  height: 10px;
+}
+.writeformsubject [type="text"]{
+  width: 80%;
+  height: 10px;
+}
+.writeformmessage textarea{
+  width: 80%;
+  height: 250px;
+  font-size: 20px;
+}
+.writetwitterid [type="text"]{
+  width: 80%;
+  height: 10px;
+}
+/*『contact.html』*/
