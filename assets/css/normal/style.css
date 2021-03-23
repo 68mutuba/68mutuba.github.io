@@ -122,8 +122,8 @@ footer {
 /*枠の作成*/
 .box{
   position: relative;
-  width: 260px;
-  height: 260px;
+  width: 280px;
+  height: 280px;
   background: #FFFFFA;
   border-bottom: 1px solid #000000;
   border-left: 1px solid #000000;
@@ -425,6 +425,37 @@ footer {
   text-decoration: none;
   transition: 1.5s;
 }
+/*blogの設定*/
+.blog{
+  color: black;
+  transition: 1.5s;
+}
+@media screen and (max-width:480px) {
+ .blog{
+   color: #20B2AA;
+ }
+}
+/*blogの所にカーソル合わした時の演出*/
+.blog:hover{
+  color: #20B2AA;
+  transition: 1.5s;
+}
+/*blogの所からカーソル離れた時の演出*/
+.blog a{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
+/*blogのURLの所にカーソル合わした時の演出*/
+.blog a:hover{
+  text-decoration: underline;
+}
+/*blogに1回訪れた時の演出*/
+.blog a:visited{
+  color: black;
+  text-decoration: none;
+  transition: 1.5s;
+}
 /*アコーディングバーの設定*/
 .acd-check{
   display: none;
@@ -626,7 +657,7 @@ footer {
   line-height: 1.8;
 }
 /*『copyright.html』*/
-/*『distribution.html』*/
+/*『distribution.html』『blog.html』*/
 #distribution{
   background: lightskyblue;
 }
@@ -699,9 +730,6 @@ footer {
 .plugin_introduction h3{
   padding: 10px;
   line-height: 1.8;
-}
-.plugin_iflame{
-  width: 80%;
 }
 .plugin_console_false{
   font-weight: bold;
@@ -819,3 +847,37 @@ footer {
   height: 10px;
 }
 /*『contact.html』*/
+/*『blog.html』*/
+#blog {
+  background: #20B2AA;
+}
+.blog_title_space{
+  text-align: center;
+  margin-top: 71px;
+  margin-bottom: 100px;
+  width: 95%;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 2.0;
+}
+.blog_title_space a{
+  color: black;
+}
+.blog_title_space a:hover{
+  color: black;
+}
+.blog_introduction{
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+  background: rgb(255, 255, 255);
+}
+.blog_introduction h1{
+  border-bottom: solid 3px #20B2AA;;
+}
+.blog_introduction h3{
+  padding: 10px;
+  line-height: 1.8;
+}
+/*『blog.html』*/
